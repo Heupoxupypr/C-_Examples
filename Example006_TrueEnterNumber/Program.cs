@@ -9,8 +9,8 @@ int GetCoordinate (string message)
     while (true)
     {
         Console.WriteLine(message);
-
-        if (int.TryParse(Console.ReadLine(), out int number) && number != 0) //out означает, 
+        //Добавлена проверка на null в console.resdline
+        if (int.TryParse(Console.ReadLine()?? "", out int number) && number != 0) //out означает, 
                                                                             //что передается ссылка на переменную number
         {
             result = number;
